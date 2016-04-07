@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+.pixLogo {
+  margin-left: 11px;
+  width: 33px;
+  height: 33px;
+}
+.cursor-pointer {
+  cursor: pointer;
+}

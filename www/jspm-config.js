@@ -20,6 +20,7 @@ System.config({
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.6",
+    "css": "github:systemjs/plugin-css@0.1.20",
     "ionic": "github:driftyco/ionic-bower@1.2.4",
     "text": "github:systemjs/plugin-text@0.0.7",
     "github:angular-ui/ui-router@0.2.13": {

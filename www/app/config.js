@@ -3,14 +3,15 @@ import appTemplate from './app.html!text';
 let AppConfig = function($locationProvider, $stateProvider, $urlRouterProvider) {
 
     // for unmatched url, redirect to top level path
-    $urlRouterProvider.otherwise('/app');
+    $urlRouterProvider.otherwise('/');
 
     $stateProvider.state('app', {
-        url: '/app',
+        url: '/',
         views: {
             "ionPane": {
                 template: appTemplate,
-                controller: 'AppController'
+                controller: 'AppController',
+                controllerAs: 'app'
             }
         }
     });

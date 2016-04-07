@@ -1,0 +1,26 @@
+<ion-side-menus>
+    <ion-side-menu side="left">
+        <ion-list>
+            <ion-item ui-sref="app" class="cursor-pointer">Winner Analysis</ion-item>
+        </ion-list>
+    </ion-side-menu>
+
+    <ion-side-menu-content>
+        <ion-header-bar class="bar-stable">
+            <h1 class="title">PixMobile</h1>
+            <a class="button button-icon icon ion-navicon-round" ng-click="app.showSideMenu()"></a>
+            <image src="/app/logo_square.png" class="pixLogo"/>
+        </ion-header-bar>
+
+        <ion-content>
+
+                <ion-list>
+                    <ion-item>Test 1</ion-item>
+                    <ion-item ng-click="showModal()">Test 2</ion-item>
+                    <ion-item>Test 3</ion-item>
+                </ion-list>
+
+        </ion-content>
+    </ion-side-menu-content>
+
+</ion-side-menus>

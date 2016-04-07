@@ -9,14 +9,11 @@
         <!-- compiled css output -->
         <link href="css/ionic.app.css" rel="stylesheet">
 
-        <!-- ionic/angularjs js -->
-        <!-- <script src="lib/ionic/js/ionic.bundle.js"></script> -->
-
         <!-- JSPM bootstrap -->
         <script src="jspm_packages/system.js"></script>
         <script src="jspm-config.js"></script>
         <script>
-            System.import('js/app.module').catch(console.error.bind(console));
+            System.import('app/app.module').catch(console.error.bind(console));
         </script>
 
         <!-- cordova script (this will be a 404 during development) -->
