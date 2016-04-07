@@ -5,6 +5,8 @@
   margin-left: 5px;
   width: 33px;
   height: 33px;
+  right: 14px;
+  position: absolute;
 }
 .cursor-pointer {
   cursor: pointer;
@@ -13,4 +15,12 @@
   right: 0;
   position: absolute;
   padding: 5px;
+}
+.pull-right {
+  position: absolute;
+  right: 0;
+  padding-right: 22px;
+}
+.selectedButton {
+  background-color: #eee;
 }

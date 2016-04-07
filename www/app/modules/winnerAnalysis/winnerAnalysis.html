@@ -1,11 +1,44 @@
 <ion-header-bar class="bar-stable">
-    <h1 class="title">PixMobile</h1>
+    <h1 class="title pixTitle">Winner Analysis</h1>
     <a class="button button-icon icon ion-navicon-round" ng-click="app.showNav()"></a>
     <image src="/app/logo_square.png" class="pixLogo"/>
 </ion-header-bar>
 
 <ion-content>
-    <ion-list>
+<!--     <ion-list>
         <ion-item ng-click="app.showAccountSwitcher()">{{app.SessionService.selectedAccount.name}}</ion-item>
+    </ion-list> -->
+
+    <div class="button-bar">
+      <a class="button" ng-class="{ selectedButton: wa.selectedView === wa.DATA_VIEWS.TOP }" ng-click="wa.applyTopView()">Top</a>
+      <a class="button" ng-class="{ selectedButton: wa.selectedView === wa.DATA_VIEWS.BOTTOM }" ng-click="wa.applyBottomView()">Bottom</a>
+    </div>
+
+    <ion-list>
+        <ion-item ng-repeat="adGroup in wa.dataView()" ng-click="wa.showAdGroupDetails(adGroup)">
+            <spiv class="adGroupName" ng-bind="adGroup.ad_group_name"></spiv>
+            <spiv class="successMetric pull-right" ng-bind="adGroup.sm"></spiv>
+
+            <div class="list card" ng-if="wa.isSelectedAdGroup(adGroup)">
+
+                <spiv class="item">
+                    View Rate <span class="pull-right">{{adGroup.vr}}</span>
+                </spiv>
+                <spiv class="item">
+                    Click Through Rate <span class="pull-right">{{adGroup.ctr}}</span>
+                </spiv>
+                <spiv class="item">
+                    Cost Per View <span class="pull-right">{{adGroup.cpv}}</span>
+                </spiv>
+                <spiv class="item">
+                    VCR <span class="pull-right">{{adGroup.vcr}}</span>
+                </spiv>
+                <spiv class="item">
+                    ER <span class="pull-right">{{adGroup.er}}</span>
+                </spiv>
+
+            </div>
+        </ion-item>
     </ion-list>
+
 </ion-content>
