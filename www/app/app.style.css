@@ -2,10 +2,15 @@
   box-sizing: border-box;
 }
 .pixLogo {
-  margin-left: 11px;
+  margin-left: 5px;
   width: 33px;
   height: 33px;
 }
 .cursor-pointer {
   cursor: pointer;
+}
+.account-display {
+  right: 0;
+  position: absolute;
+  padding: 5px;
 }

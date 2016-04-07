@@ -10,15 +10,17 @@
             <h1 class="title">PixMobile</h1>
             <a class="button button-icon icon ion-navicon-round" ng-click="app.showSideMenu()"></a>
             <image src="/app/logo_square.png" class="pixLogo"/>
+
+            <spiv class="account-display" ng-bind="app.SessionService.selectedAccount.name"></spiv>
         </ion-header-bar>
 
         <ion-content>
 
-                <ion-list>
-                    <ion-item>Test 1</ion-item>
-                    <ion-item ng-click="showModal()">Test 2</ion-item>
-                    <ion-item>Test 3</ion-item>
-                </ion-list>
+            <ion-list>
+                <ion-item>Test 1</ion-item>
+                <ion-item ng-click="showModal()">Test 2</ion-item>
+                <ion-item>Test 3</ion-item>
+            </ion-list>
 
         </ion-content>
     </ion-side-menu-content>

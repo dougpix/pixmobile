@@ -9,12 +9,16 @@ import "angular-ui-router";
 
 import appConfig from './config';
 import AppController from './app.controller';
+import spiv from 'app/common/spiv/spiv.directive';
+import SessionService from 'app/common/session/Session.service.js';
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 angular.module('pixmobile', ['ionic'])
 .controller('AppController', AppController)
+.directive('spiv', spiv)
+.service('SessionService', SessionService)
 .config(appConfig)
 .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {

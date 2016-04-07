@@ -1,6 +1,6 @@
 import 'app/app.style.css!css';
 
-let AppController = function($scope, $ionicModal, $ionicSideMenuDelegate) {
+let AppController = function($scope, $ionicModal, $ionicSideMenuDelegate, SessionService) {
     $scope.modalContent = "Some test modal content";
     var testModal = `
         <ion-modal-view>
@@ -16,6 +16,7 @@ let AppController = function($scope, $ionicModal, $ionicSideMenuDelegate) {
     $scope.showModal = function() { modal.show(); };
 
     this.showSideMenu = () => $ionicSideMenuDelegate.toggleLeft();
+    this.SessionService = SessionService;
 }
 
 export default AppController;
