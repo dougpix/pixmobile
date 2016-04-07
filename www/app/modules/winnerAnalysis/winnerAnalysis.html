@@ -1,0 +1,11 @@
+<ion-header-bar class="bar-stable">
+    <h1 class="title">PixMobile</h1>
+    <a class="button button-icon icon ion-navicon-round" ng-click="app.showNav()"></a>
+    <image src="/app/logo_square.png" class="pixLogo"/>
+</ion-header-bar>
+
+<ion-content>
+    <ion-list>
+        <ion-item ng-click="app.showAccountSwitcher()">{{app.SessionService.selectedAccount.name}}</ion-item>
+    </ion-list>
+</ion-content>

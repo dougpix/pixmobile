@@ -4,7 +4,8 @@ class SessionService {
 
     constructor() {
         this._session = {
-            account: null
+            account: null,
+            accounts: []
         }
 
         if (true) {
@@ -38,6 +39,10 @@ class SessionService {
 
     get user_id() {
         return this._session.user_id;
+    }
+
+    get accounts() {
+        return this._session.accounts;
     }
 
 }

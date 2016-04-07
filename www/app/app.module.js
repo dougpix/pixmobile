@@ -3,6 +3,8 @@
 //import "ionic/js/dist/js/ionic";
 import "lib/ionic/js/ionic.bundle";
 import "angular";
+import 'js-data';
+import 'js-data-angular';
 import "angular-animate";
 import "angular-ui-router";
 //import "ionic/js/dist/js/ionic-angular";
@@ -10,12 +12,15 @@ import "angular-ui-router";
 import appConfig from './config';
 import AppController from './app.controller';
 import spiv from 'app/common/spiv/spiv.directive';
-import SessionService from 'app/common/session/Session.service.js';
+import SessionService from 'app/common/session/session.service.js';
+
+import DataStore from 'app/models/dataStore.module';
+import WinnerAnalysis from 'app/modules/winnerAnalysis/winnerAnalysis.module';
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('pixmobile', ['ionic'])
+let pixmobile = angular.module('pixmobile', ['ionic', 'js-data', DataStore.name, WinnerAnalysis.name])
 .controller('AppController', AppController)
 .directive('spiv', spiv)
 .service('SessionService', SessionService)
@@ -37,3 +42,5 @@ angular.module('pixmobile', ['ionic'])
         }
     });
 })
+
+export default pixmobile;

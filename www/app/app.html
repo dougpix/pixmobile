@@ -1,28 +1,25 @@
 <ion-side-menus>
-    <ion-side-menu side="left">
+    <ion-side-menu side="left" ng-if="app.isNavMode()">
         <ion-list>
-            <ion-item ui-sref="app" class="cursor-pointer">Winner Analysis</ion-item>
+            <div class="item item-divider">
+                Navigation
+            </div>
+            <ion-item ui-sref="app.winnerAnalysis" class="cursor-pointer">Winner Analysis</ion-item>
+        </ion-list>
+    </ion-side-menu>
+
+    <ion-side-menu side="left" ng-if="app.isAccountSwitcher()">
+        <ion-list>
+            <div class="item item-divider">
+                Accounts
+            </div>
+            <ion-item ng-repeat="account in app.SessionService.accounts" ng-click="app.switchToAccount(account)" class="cursor-pointer">{{account.name}}</ion-item>
         </ion-list>
     </ion-side-menu>
 
     <ion-side-menu-content>
-        <ion-header-bar class="bar-stable">
-            <h1 class="title">PixMobile</h1>
-            <a class="button button-icon icon ion-navicon-round" ng-click="app.showSideMenu()"></a>
-            <image src="/app/logo_square.png" class="pixLogo"/>
-
-            <spiv class="account-display" ng-bind="app.SessionService.selectedAccount.name"></spiv>
-        </ion-header-bar>
-
-        <ion-content>
-
-            <ion-list>
-                <ion-item>Test 1</ion-item>
-                <ion-item ng-click="showModal()">Test 2</ion-item>
-                <ion-item>Test 3</ion-item>
-            </ion-list>
-
-        </ion-content>
+        <ion-view ui-view="currentPage">
+        </ion-view>
     </ion-side-menu-content>
 
 </ion-side-menus>
