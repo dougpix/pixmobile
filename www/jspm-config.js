@@ -21,6 +21,7 @@ System.config({
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.6",
     "ionic": "github:driftyco/ionic-bower@1.2.4",
+    "text": "github:systemjs/plugin-text@0.0.7",
     "github:angular-ui/ui-router@0.2.13": {
       "angular": "github:angular/bower-angular@1.5.3"
     },

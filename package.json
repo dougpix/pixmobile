@@ -23,7 +23,8 @@
       "angular": "github:angular/bower-angular@^1.5.3",
       "angular-animate": "github:angular/bower-angular-animate@1.4.3",
       "angular-ui-router": "github:angular-ui/ui-router@^0.2.18",
-      "ionic": "github:driftyco/ionic-bower@^1.2.4"
+      "ionic": "github:driftyco/ionic-bower@^1.2.4",
+      "text": "github:systemjs/plugin-text@^0.0.7"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",

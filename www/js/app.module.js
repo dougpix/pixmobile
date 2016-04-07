@@ -7,26 +7,15 @@ import "angular-animate";
 import "angular-ui-router";
 //import "ionic/js/dist/js/ionic-angular";
 
+import appConfig from './config';
+import AppController from './app.controller';
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic'])
-.controller('TestController', function($scope, $ionicModal) {
-    $scope.modalContent = "Some test modal content";
-    var testModal = `
-        <ion-modal-view>
-            <ion-header-bar>
-                <h1 class="title">My Modal title</h1>
-            </ion-header-bar>
-            <ion-content>
-                <span ng-bind="modalContent"></span>
-            </ion-content>
-        </ion-modal-view>
-    `;
-    var modal = $ionicModal.fromTemplate(testModal, { scope: $scope });
-    $scope.showModal = function() { modal.show(); };
-})
+angular.module('pixmobile', ['ionic'])
+.controller('AppController', AppController)
+.config(appConfig)
 .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
         if(window.cordova && window.cordova.plugins.Keyboard) {
