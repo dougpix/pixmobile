@@ -10,7 +10,8 @@ System.config({
   },
   paths: {
     "github:*": "jspm_packages/github/*",
-    "npm:*": "jspm_packages/npm/*"
+    "npm:*": "jspm_packages/npm/*",
+    "bower:*": "jspm_packages/bower/*"
   },
 
   map: {
@@ -21,12 +22,18 @@ System.config({
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.6",
     "css": "github:systemjs/plugin-css@0.1.20",
+    "d3": "npm:d3@3.5.16",
+    "d3-tip": "bower:d3-tip@0.6.7",
+    "d3-transform": "npm:d3-transform@1.0.4",
     "ionic": "github:driftyco/ionic-bower@1.2.4",
     "js-data": "github:js-data/js-data@2.9.0",
     "js-data-angular": "github:js-data/js-data-angular@3.2.1",
     "lodash": "npm:lodash@4.8.2",
     "moment": "npm:moment@2.12.0",
     "text": "github:systemjs/plugin-text@0.0.7",
+    "bower:d3-tip@0.6.7": {
+      "d3": "bower:d3@3.5.5"
+    },
     "github:angular-ui/ui-router@0.2.13": {
       "angular": "github:angular/bower-angular@1.5.3"
     },

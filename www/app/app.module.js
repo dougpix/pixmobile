@@ -7,12 +7,16 @@ import 'js-data';
 import 'js-data-angular';
 import "angular-animate";
 import "angular-ui-router";
+import 'd3';
+import 'd3-tip';
+import 'd3-transform';
+
 //import "ionic/js/dist/js/ionic-angular";
 
 import appConfig from './config';
 import AppController from './app.controller';
 import spiv from 'app/common/spiv/spiv.directive';
-import SessionService from 'app/common/session/session.service.js';
+import SessionService from 'app/common/session/session.service';
 
 import DataStore from 'app/models/dataStore.module';
 import WinnerAnalysis from 'app/modules/winnerAnalysis/winnerAnalysis.module';

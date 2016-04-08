@@ -24,3 +24,6 @@
 .selectedButton {
   background-color: #eee;
 }
+.successGraph {
+  display: block;
+}

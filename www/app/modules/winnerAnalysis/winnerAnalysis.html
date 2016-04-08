@@ -14,6 +14,8 @@
       <a class="button" ng-class="{ selectedButton: wa.selectedView === wa.DATA_VIEWS.BOTTOM }" ng-click="wa.applyBottomView()">Bottom</a>
     </div>
 
+    <success-graph class="successGraph" data="wa.dataView()"></success-graph>
+
     <ion-list>
         <ion-item ng-repeat="adGroup in wa.dataView()" ng-click="wa.showAdGroupDetails(adGroup)">
             <spiv class="adGroupName" ng-bind="adGroup.ad_group_name"></spiv>
